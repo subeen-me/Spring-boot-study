@@ -7,11 +7,11 @@ import org.springframework.web.bind.annotation.*;
 public class MappingClassController {
 
     @GetMapping
-    public String user() {
+    public String users() {
         return "get users";
     }
 
-    @PostMapping("/mapping/users")
+    @PostMapping
     public String addUser() {
         return "post user";
     }
@@ -26,7 +26,7 @@ public class MappingClassController {
         return "update userId = " + userId;
     }
 
-    @PatchMapping("/{userId}")
+    @DeleteMapping("/{userId}")
     public String deleteUser(@PathVariable String userId) {
         return "delete userId = " + userId;
     }
